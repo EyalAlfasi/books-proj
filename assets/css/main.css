@@ -1,0 +1,247 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 8px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header-container {
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.header-container nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 80px;
+}
+
+.header-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+}
+
+.header-container ul li a {
+    display: inline-block;
+    color: #f9f9f9;
+    font-size: 1.4em;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+.header-container ul li a:hover {
+    background-color: #4de77b;
+}
+
+.nav-active {
+    background-color: #4de77b;
+    font-weight: 700;
+}
+
+.header-container ul li:not(:last-child) {
+    margin-inline-start: 20px;
+}
+
+.header-container ul li:first-child {
+    margin-inline-end: 20px;
+}
+
+.home-container, .about-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.home-titles-container, .about-titles-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline-start: 1em;
+}
+
+.home-titles-container h2 {
+    font-size: 3em;
+}
+
+.home-titles-container h3 {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.about-titles-container h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.about-titles-container p {
+    font-size: 1.2em;
+}
+
+.start-here-btn {
+    border: none;
+    font-size: 2em;
+    background-color: #54fa86;
+    color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.start-here-btn:hover {
+    background-color: #75fd9e;
+}
+
+.home-img-container, .about-img-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-img-container img, .about-img-container img {
+    width: 100%;
+}
+
+.books-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.book-preview {
+    height: 250px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6px;
+    text-align: center;
+    box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.book-preview:hover {
+    transform: translateY(-5px);
+}
+
+.book-preview img {
+    width: 50%;
+}
+
+.book-title {
+    color: #333333;
+    font-size: 1em;
+}
+
+.book-price {
+    background-color: #44e085;
+    color: #f9f9f9;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.book-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book-tags span {
+    display: inline-block;
+    background-color: #44e085;
+    color: #f9f9f9;
+    margin: 10px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.thumbnail-container {
+    position: relative;
+    margin-top: 1.2em;
+}
+
+.thumbnail-container span {
+    position: absolute;
+    background-color: rgb(34, 101, 247);
+    font-weight: 700;
+    top: 0;
+    right: 0;
+    font-size: 1.8em;
+    padding: 10px;
+}
+
+.dir-rtl {
+    flex-direction: row-reverse;
+}
+
+.red-price {
+    color: red;
+}
+
+.green-price {
+    color: green;
+}
+
+.filters {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width:768px) {
+    .home-container, .about-container {
+        display: flex;
+        flex-direction: row;
+        height: calc(100vh - 80px);
+    }
+    .home-titles-container, .about-titles-container {
+        padding-inline-start: 4em;
+    }
+    .about-titles-container p {
+        width: 75%;
+    }
+    .about-container {
+        width: 80%;
+        margin: auto;
+    }
+    .home-titles-container h2 {
+        font-size: 5em;
+    }
+    .home-titles-container h3 {
+        font-size: 2em;
+    }
+}
