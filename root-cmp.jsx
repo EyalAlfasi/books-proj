@@ -7,19 +7,16 @@ const Router = ReactRouterDOM.HashRouter;
 const { Route, Switch } = ReactRouterDOM;
 
 export function App() {
-    return (
-        <Router>
-            < section className="app" >
-                <_AppHeader />
-                <Switch>
-                    <Route path="/bookApp/:bookId" component={BookDetails} />
-                    <Route path="/about" component={About} />
-                    <Route path="/bookApp" component={BookApp} />
-                    <Route path="/" component={Home} />
-                </Switch>
-            </section >
-        </Router>
-    )
-
+    return <Router>
+        < section className="app" >
+            <_AppHeader />
+            <Switch>
+                <Route path="/bookApp/:bookId" component={BookDetails} />
+                <Route path="/about" component={About} />
+                <Route path="/bookApp" component={BookApp} />
+                <Route path="/" component={Home} />
+            </Switch>
+        </section >
+    </Router>
 }
 
