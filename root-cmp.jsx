@@ -1,4 +1,4 @@
-import { AppHeader } from './cmps/header.jsx';
+import { _AppHeader } from './cmps/header.jsx';
 import { About } from './pages/about.jsx'
 import { BookApp } from './pages/book-app.jsx'
 import { Home } from './pages/home.jsx'
@@ -10,7 +10,7 @@ export function App() {
     return (
         <Router>
             < section className="app" >
-                <AppHeader />
+                <_AppHeader />
                 <Switch>
                     <Route path="/bookApp/:bookId" component={BookDetails} />
                     <Route path="/about" component={About} />
