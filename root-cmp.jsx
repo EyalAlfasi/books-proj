@@ -1,4 +1,4 @@
-import { _AppHeader } from './cmps/header.jsx';
+import { _AppHeader } from './cmps/Header.jsx';
 import { About } from './pages/about.jsx'
 import { BookApp } from './pages/book-app.jsx'
 import { Home } from './pages/home.jsx'
